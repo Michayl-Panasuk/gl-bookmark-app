@@ -1,0 +1,11 @@
+<mat-nav-list>
+  <mat-list-item *ngFor="let item of items">
+    <a matLine
+       [href]="item.url"
+       target="blank">{{ item.url }}</a>
+    <button mat-icon-button
+            (click)="onDelete(item.id, $event)">
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-list-item>
+</mat-nav-list>

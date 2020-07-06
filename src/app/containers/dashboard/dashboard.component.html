@@ -1,0 +1,40 @@
+<div class="dashboard">
+  <div class="row">
+    <div class="dashboard--groups col p-3">
+      <aside>
+        <app-groups-list [items]="groups$ | async"
+                         [selectedItem]="selectedGroup$ | async"></app-groups-list>
+      </aside>
+    </div>
+
+    <div class="dashboard--container col">
+      <div class="dashboard--toolbar pt-3">
+        <div class="row">
+          <div class="col ">
+            <mat-form-field appearance="fill"
+                            class="w-100">
+              <mat-icon matPrefix>search</mat-icon>
+              <mat-label>Search</mat-label>
+              <input [formControl]="searchTermControl"
+                     matInput>
+            </mat-form-field>
+          </div>
+
+          <button (click)="onBookmarkAdd()"
+                  mat-fab
+                  color="primary"
+                  aria-label="Add bookmark">
+            <mat-icon>add</mat-icon>
+          </button>
+        </div>
+      </div>
+
+      <div class="dashboard--content">
+        <main>
+          <app-bookmarks-list [items]="filteredBookmarks$ | async"
+                              (delete)="onBookmarkDelete($event)"></app-bookmarks-list>
+        </main>
+      </div>
+    </div>
+  </div>
+</div>

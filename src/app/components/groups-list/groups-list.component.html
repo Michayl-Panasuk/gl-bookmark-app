@@ -1,0 +1,12 @@
+<div class="groups-list">
+  <mat-action-list>
+    <button mat-list-item
+            *ngFor="let item of items"
+            (click)="onItemClick(item)">
+      <mat-icon *ngIf="item.key === selectedKey"
+                mat-list-icon>checkmark</mat-icon>
+      {{item.label}}
+    </button>
+  </mat-action-list>
+
+</div>

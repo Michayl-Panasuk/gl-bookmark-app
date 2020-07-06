@@ -1,0 +1,32 @@
+<h3 mat-dialog-title>Add Bookmark</h3>
+<div mat-dialog-content>
+  <form [formGroup]="form"
+        (submit)="add()">
+    <!-- <mat-form-field appearance="fill">
+      <mat-label>Label</mat-label>
+      <input cdkFocusInitial
+             formControlName="label"
+             matInput>
+    </mat-form-field>
+    <br> -->
+    <mat-form-field appearance="fill">
+      <mat-label>Url</mat-label>
+      <input formControlName="url"
+             matInput>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>Select Group</mat-label>
+      <mat-select formControlName="group">
+        <mat-option *ngFor="let opt of groups"
+                    value="opt.key">{{opt.label}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button
+          (click)="cancel()">Cancel</button>
+  <button mat-button
+          (click)="add()">Add</button>
+</div>

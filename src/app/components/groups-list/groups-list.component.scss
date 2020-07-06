@@ -1,0 +1,12 @@
+.groups-list {
+  .mat-list-item {
+    min-height: 56px;
+  }
+
+  .mat-icon {
+    position: absolute;
+    right: 0.5em;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

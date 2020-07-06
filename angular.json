@@ -30,6 +30,11 @@
             "styles": [
               "src/styles.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/styles"
+              ]
+            },
             "scripts": []
           },
           "configurations": {
@@ -124,6 +129,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "bookmarks"
+    }
+  },
+  "defaultProject": "bookmarks",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }
