@@ -1,6 +1,18 @@
 # Bookmarks
 
+[App demo](http://gl-bookmark-app.surge.sh/)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.28.
+
+
+## Short description
+
+Persistent bookmarks state with localforage;
+Active state managed by ngrx;
+Bookmarks state managed by ngrx/entity;
+Async actions handled by ngrx/effects;
+Router query params synced with store via ngrx/router-store;
+
 
 ## Development server
 
